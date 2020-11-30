@@ -1,0 +1,18 @@
+{
+  "name": "hicon",
+  "version": "1.0.0",
+  "description": "Project for 10 classes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/br-prog/hicon.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "br-prog",
+  "license": "ISC"
+}
