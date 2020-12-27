@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: $main-back;
+  font-family: 'Comfortaa';
+  font-weight: 400;
+  &__up {
+    cursor: pointer;
+    &:hover {
+      animation: up 1s linear;
+    }
+  }
+
+  &__logo {
+    color: $main-text;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}

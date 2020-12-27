@@ -6,9 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>hicon</title>
+  <link rel="icon" href="{% static 'icons/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+
+  <style>
+    @font-face {
+      font-family: 'Comfortaa';
+      src: local("Comfortaa-Light");
+      src: url("{% static 'fonts/Comfortaa-Light.ttf' %}") format("truetype");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Comfortaa';
+      src: local("Comfortaa-Regular");
+      src: url("{% static 'fonts/Comfortaa-Regular.ttf' %}") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Comfortaa';
+      src: local("Comfortaa-SemiBold");
+      src: url("{% static 'fonts/Comfortaa-SemiBold' %}") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Comfortaa';
+      src: local("Comfortaa-Bold");
+      src: url("{% static 'fonts/Comfortaa-Bold.ttf' %}") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Philosopher';
+      src: local("Philosopher-Regular");
+      src: url("{% static 'fonts/Philosopher-Regular.ttf' %}") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Philosopher';
+      src: local("Philosopher-Bold");
+      src: url("{% static 'fonts/Philosopher-Bold.ttf' %}") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Philosopher';
+      src: local("Philosopher-Italic");
+      src: url("{% static 'fonts/Philosopher-Italic.ttf' %}") format("truetype");
+      font-weight: 400;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <header>fasdf</header>
-  <section>fsdfaopisdfoip</section>
+  <header class="header">
+    <div class="header__up"><img src="{% static 'icons/arrow.svg' %}" alt="arrow_up"></div>
+    <div class="header__logo">hicon</div>
+    <a href="#" class="btn">Рег/Лог</div>
+  </header>
+  {% block content %}
+  {% endblock %}
 </body>
 </html>

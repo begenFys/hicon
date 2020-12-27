@@ -1,0 +1,140 @@
+/* @font-face {
+  font-family: 'Comfortaa';
+  src: local("Comfortaa-Light");
+  src: url("/static/fonts/Comfortaa-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: local("Comfortaa-Regular");
+  src: url("/static/fonts/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: local("Comfortaa-SemiBold");
+  src: url("/static/fonts/Comfortaa-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: local("Comfortaa-Bold");
+  src: url("/static/fonts/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Philosopher';
+  src: local("Philosopher-Regular");
+  src: url("/static/fonts/Philosopher-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Philosopher';
+  src: local("Philosopher-Bold");
+  src: url("/static/fonts/Philosopher-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Philosopher';
+  src: local("Philosopher-Italic");
+  src: url("/static/fonts/Philosopher-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+ */
+@-webkit-keyframes up {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes up {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  width: 135px;
+  height: 45px;
+  text-align: center;
+  background-color: #FF9A90;
+  color: #222;
+  border-radius: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.btn:hover {
+  color: #222;
+  -webkit-box-shadow: 0 0 10px 3px #D36E64;
+          box-shadow: 0 0 10px 3px #D36E64;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  background-color: #D6C3F1;
+  font-family: 'Comfortaa';
+  font-weight: 400;
+}
+
+.header__up {
+  cursor: pointer;
+}
+
+.header__up:hover {
+  -webkit-animation: up 1s linear;
+          animation: up 1s linear;
+}
+
+.header__logo {
+  color: #3129D8;
+  font-size: 28px;
+  line-height: 28px;
+}
+/*# sourceMappingURL=style.css.map */

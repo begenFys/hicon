@@ -1,0 +1,17 @@
+.btn {
+  cursor: pointer;
+  width: 135px;
+  height: 45px;
+  text-align: center;
+  background-color: $second-back;
+  color: $second-text;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-size: 28px;
+  line-height: 45px;
+  &:hover{
+    color: $second-text;
+    box-shadow: 0 0 10px 3px $second-back-hover;
+  }
+}
