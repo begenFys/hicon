@@ -4,6 +4,10 @@
 @import 'base/variables';
 @import 'base/mixins';
 
+* {
+  color: $main-text;
+}
+
 @import 'blocks/button';
 
 @import 'blocks/header';

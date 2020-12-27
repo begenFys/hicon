@@ -9,3 +9,39 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes down{
+  0%{
+    transform: rotate(180deg) translateY(0px);
+  }
+  50%{
+    transform: rotate(180deg) translateY(-10px);
+  }
+  100%{
+    transform: rotate(180deg) translateY(0px);
+  }
+}
+
+@keyframes rise{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes time {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

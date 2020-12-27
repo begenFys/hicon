@@ -1,7 +1,40 @@
 {% extends 'layout.html' %}
+{% load static %}
 {% block content %}
   <section class="promo">
-    <h1 class="promo__header"></h1>
-    <h2 class="promo_subheader"></h2>
+    <div class="container">
+      <h1 class="promo__header">hicon</h1>
+      <h2 class="promo__subheader">твой помощник в выполнении д/з</h2>
+      <div class="promo__wrapper">
+        <div class="promo__item">
+          <div class="promo__icon">
+            <img src="{% static 'icons/promo/icon1.svg' %}" alt="icon1">
+          </div>
+          <div class="promo__text">улучшит твои способности</div>
+        </div>
+        <div class="promo__item">
+          <div class="promo__icon">
+            <img src="{% static 'icons/promo/icon2.svg' %}" alt="icon2">
+          </div>
+          <div class="promo__text">научит тайм-менеджменту</div>
+        </div>
+        <div class="promo__item">
+          <div class="promo__icon">
+            <img src="{% static 'icons/promo/icon3.svg' %}" alt="icon3">
+          </div>
+          <div class="promo__text">поможет с домашкой правильно</div>
+        </div>
+        <div class="promo__item">
+          <div class="promo__icon">
+            <img src="{% static 'icons/promo/icon4.svg' %}" alt="icon4">
+          </div>
+          <div class="promo__text">повысит твою успеваемость</div>
+        </div>
+      </div>
+
+      <button href="#" class="btn btn_big">
+        узнать больше <img src="{% static 'icons/arrow.svg' %}" alt="arrow_up">
+      </button>
+    </div>
   </section>
 {% endblock %}

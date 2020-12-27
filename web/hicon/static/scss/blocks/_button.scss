@@ -4,14 +4,31 @@
   height: 45px;
   text-align: center;
   background-color: $second-back;
-  color: $second-text;
+  color: $main-text;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.5s;
   font-size: 28px;
-  line-height: 45px;
+  line-height: 48px;
+  outline: none;
+  border: none;
+  &_big {
+    width: 320px;
+    height: 70px;
+    text-transform: uppercase;
+    font-family: Philosopher;
+    font-size: 28px;
+    img {
+      transform: rotate(180deg);
+    }
+    &:hover {
+      img {
+        animation: down 1s linear infinite;
+      }
+    }
+  }
   &:hover{
-    color: $second-text;
+    color: $main-text;
     box-shadow: 0 0 10px 3px $second-back-hover;
   }
 }
