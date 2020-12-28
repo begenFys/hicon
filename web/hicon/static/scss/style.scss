@@ -6,9 +6,15 @@
 
 * {
   color: $main-text;
+  font-family: Comfortaa;
 }
 
 @import 'blocks/button';
+@import 'blocks/title';
 
 @import 'blocks/header';
 @import 'blocks/promo';
+@import 'blocks/about';
+@import 'blocks/function';
+
+@import 'base/media';

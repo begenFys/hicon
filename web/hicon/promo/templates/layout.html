@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-
+  {% block css %}
+  {% endblock %}
   <style>
     @font-face {
       font-family: 'Comfortaa';
@@ -65,9 +66,11 @@
   <header class="header">
     <div class="header__up"><img src="{% static 'icons/arrow.svg' %}" alt="arrow_up"></div>
     <div class="header__logo">hicon</div>
-    <a href="#" class="btn">Рег/Лог</div>
+    <a href="#" class="btn">Рег/Вход</a>
   </header>
   {% block content %}
+  {% endblock %}
+  {% block javascript %}
   {% endblock %}
 </body>
 </html>

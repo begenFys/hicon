@@ -1,25 +1,26 @@
 .promo {
+  @include top;
   padding: 30px 0;
-  font-family: Comfortaa;
-  font-weight: 400;
   background-color: $section-back;
   @include bottom;
   &__header {
     font-weight: 700;
     font-size: 64px;
     color: $second-text;
+    text-align: center;
   }
   &__subheader {
     font-size: 32px;
+    font-weight: 300;
     margin-bottom: 45px;
+    text-align: center;
   }
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;
     margin-bottom: 40px;
   }
   &__item {
+    margin: 0 auto;
     width: 220px;
     padding: 10px;
     display: flex;
@@ -55,7 +56,7 @@
     }
   }
   &__text {
-    width: 100%;
+    width: 125px;
     text-align: center;
     font-family: Philosopher;
     font-size: 20px;

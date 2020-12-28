@@ -1,29 +1,39 @@
 {% extends 'layout.html' %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+{% endblock %}
 {% block content %}
-  <section class="promo">
-    <div class="container">
-      <h1 class="promo__header">hicon</h1>
-      <h2 class="promo__subheader">твой помощник в выполнении д/з</h2>
-      <div class="promo__wrapper">
+<section class="promo">
+  <div class="container">
+    <h1 class="promo__header">hicon</h1>
+    <h2 class="promo__subheader">твой помощник в выполнении д/з</h2>
+    <div class="row promo__wrapper">
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="promo__item">
           <div class="promo__icon">
             <img src="{% static 'icons/promo/icon1.svg' %}" alt="icon1">
           </div>
           <div class="promo__text">улучшит твои способности</div>
         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="promo__item">
           <div class="promo__icon">
             <img src="{% static 'icons/promo/icon2.svg' %}" alt="icon2">
           </div>
           <div class="promo__text">научит тайм-менеджменту</div>
         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="promo__item">
           <div class="promo__icon">
             <img src="{% static 'icons/promo/icon3.svg' %}" alt="icon3">
           </div>
-          <div class="promo__text">поможет с домашкой правильно</div>
+          <div class="promo__text">поможет с домашкой</div>
         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12">
         <div class="promo__item">
           <div class="promo__icon">
             <img src="{% static 'icons/promo/icon4.svg' %}" alt="icon4">
@@ -31,10 +41,65 @@
           <div class="promo__text">повысит твою успеваемость</div>
         </div>
       </div>
-
-      <button href="#" class="btn btn_big">
-        узнать больше <img src="{% static 'icons/arrow.svg' %}" alt="arrow_up">
-      </button>
     </div>
-  </section>
+
+    <a href="#about" class="btn btn_big">
+      узнать больше <img src="{% static 'icons/arrow.svg' %}" alt="arrow_up">
+    </a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-sm-12">
+        <div class="about__content">
+          <div class="title">
+            Что такое hicon?
+          </div>
+          <div class="about__text">
+            <span>Это:..</span>
+            <ul class="about__list">
+              <li>Твой карманный помощник</li>
+              <li>Твой наставник по домашке</li>
+              <li>Твой учитель по тайм-менеджменту</li>
+              <li>Твоя напоминалка</li>
+              <li>Твоя отличная успеваемость</li>
+              <li>Твоя продуктивность</li>
+              <li>Твой друг!</li>
+              <li>Коты, где только можно)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-sm-12">
+        <div class="about__img">
+          <img src="{% static 'img/cat.png' %}" alt="cat">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="function">
+  <div class="container">
+    <div class="title">Наш функционал</div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://img.gazeta.ru/files3/845/7947845/upload-shutterstock_117062077-pic905v-895x505-99863.jpg" alt="https://img.gazeta.ru/files3/845/7947845/upload-shutterstock_117062077-pic905v-895x505-99863.jpg"></div>
+        <div class="swiper-slide"><img src="https://www.eg.ru/wp-content/uploads/2017/06/70193949217105254.jpg" alt="https://www.eg.ru/wp-content/uploads/2017/06/70193949217105254.jpg"></div>
+      </div>
+  
+      <div class="swiper-pagination"></div>
+  
+      <img src="{% static 'icons/prev.svg' %}" alt="prev" class="swiper-button-prev">
+      <img src="{% static 'icons/next.svg' %}" alt="next" class="swiper-button-next">
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
