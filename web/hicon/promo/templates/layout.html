@@ -9,7 +9,6 @@
   <link rel="icon" href="{% static 'icons/favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
   {% block css %}
   {% endblock %}
   <style>
@@ -63,13 +62,40 @@
   </style>
 </head>
 <body>
+  <div id="up"></div>
   <header class="header">
-    <div class="header__up"><img src="{% static 'icons/arrow.svg' %}" alt="arrow_up"></div>
+    <a href="#up" class="header__up"><img src="{% static 'icons/arrow.svg' %}" alt="arrow_up"></a>
     <div class="header__logo">hicon</div>
-    <a href="#" class="btn">Рег/Вход</a>
+    <div class="header__buttons">
+      <a href="{% url 'reg' %}" class="btn">Рег</a>
+      <a href="{% url 'log' %}" class="btn">Вход</a>
+    </div>
   </header>
   {% block content %}
   {% endblock %}
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="footer__social">
+            <a href="https://vk.com/visoyn/" class="footer__link" target="_blank"><img src="{% static 'icons/social/vk.svg' %}" alt="vk"></a>
+            <a href="https://www.instagram.com/visoyn" class="footer__link" target="_blank"><img src="{% static 'icons/social/inst.svg' %}" alt="inst"></a>
+            <a href="https://github.com/br-prog" class="footer__link" target="_blank"><img src="{% static 'icons/social/github.svg' %}" alt="github"></a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer__descr">
+            скорей подключайся к <a href="{% url 'reg' %}">hicon</a> и делай домашку эффективнее
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer__author">
+            begenFys
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   {% block javascript %}
   {% endblock %}
 </body>

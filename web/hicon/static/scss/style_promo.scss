@@ -1,0 +1,21 @@
+@import 'libs/animations_promo';
+
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+  color: $main-text;
+  font-family: Comfortaa;
+}
+
+@import 'blocks/general/button';
+@import 'blocks/general/title';
+
+@import 'blocks/general/header';
+@import 'blocks/promo/promo';
+@import 'blocks/promo/about';
+@import 'blocks/promo/function';
+@import 'blocks/general/footer';
+
+@import 'base/media_general';
+@import 'base/media_promo';

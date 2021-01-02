@@ -1,0 +1,16 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+  color: $main-text;
+  font-family: Comfortaa;
+}
+
+@import 'blocks/general/button';
+@import 'blocks/general/title';
+
+@import 'blocks/general/header';
+@import 'blocks/general/footer';
+
+@import 'base/media_general';
+@import 'base/media_account';

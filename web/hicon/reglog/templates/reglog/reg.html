@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style_reglog.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="forms">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="title">Регистрация</div>
+        {{ form.non_field_errors }}
+        <form method="post" class='reg'>
+          {% csrf_token %}
+          {{ form.first_name }}
+          {{ form.last_name }}
+          {{ form.email }}
+          {{ form.password }}
+          <button type="submit" class="btn btn_reg">Подтвердить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

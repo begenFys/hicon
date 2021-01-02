@@ -32,8 +32,15 @@
       }
     }
   }
+  &_log, &_reg {
+    margin-top: 10px;
+    font-size: 28px;
+  }
+  &_reg {
+    width: 290px;
+  }
   &:hover{
     color: $main-text;
-    box-shadow: 0 0 10px 3px $second-back-hover;
+    box-shadow: 0 0 10px 5px $second-back-hover;
   }
 }

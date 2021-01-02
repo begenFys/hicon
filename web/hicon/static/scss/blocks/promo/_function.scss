@@ -1,6 +1,8 @@
 .function {
   @include top;
   padding: 30px 0;
+  background: $section-back;
+  @include bottom;
   .swiper-container{
     margin: 0 auto;
     width: 100%;

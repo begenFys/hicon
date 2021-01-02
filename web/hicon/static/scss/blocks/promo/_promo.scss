@@ -29,18 +29,24 @@
     align-items: center;
     border: 1px solid $main-text;
     border-radius: 10px;
-    &:nth-child(1):hover, &:nth-child(3):hover {
-      img {
+    
+    &:nth-child(1):hover{
+      .promo__icon {
         animation: rise 1s linear;
       }
     }
-    &:nth-child(2):hover {
-      img {
+    &:nth-child(2):hover{
+      .promo__icon {
         animation: time 3s linear;
       }
     }
+    &:nth-child(3):hover{
+      .promo__icon {
+        animation: rise 1s linear;
+      }
+    }
     &:nth-child(4):hover{
-      img {
+      .promo__icon {
         animation: up 1s linear;
       }
     }

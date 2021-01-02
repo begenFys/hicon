@@ -20,4 +20,10 @@
     font-size: 28px;
     line-height: 28px;
   }
+  &__buttons {
+    display: flex;
+    .btn:nth-child(1) {
+      margin-right: 10px;
+    }
+  }
 }

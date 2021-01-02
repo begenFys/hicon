@@ -1,0 +1,60 @@
+@keyframes rise{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.footer {
+  @include top;
+  height: 80px;
+  background: $main-back;
+  display: flex;
+  align-items: center;
+  .row {
+    align-items: center;
+  }
+  &__social{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background: $second-back;
+    box-shadow: 0 0 10px 1px $second-text;
+    &:hover {
+      animation: rise 1s linear infinite;
+    }
+  }
+  &__descr {
+    font-family: Philosopher;
+    font-size: 22px;
+    font-weight: 700;
+    a {
+      font-family: Comfortaa;
+      font-weight: 400;
+      color: $second-text;
+      transition: all 0.6s;
+      &:hover  {
+        text-shadow: 0px 0px 5px $second-text;
+      }
+    }
+  }
+  &__author {
+    cursor: default;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 0px 0px 5px $second-text;
+  }
+}
