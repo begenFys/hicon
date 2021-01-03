@@ -10,8 +10,8 @@ class RegForm(forms.ModelForm):
     return self.cleaned_data
 
   class Meta:
-    model = User 
-    fields = ['first_name', 'last_name', 'email', 'password']
+    model = User  
+    fields = ['first_name', 'last_name', 'email','password']
     widgets = {
       'first_name': forms.TextInput(attrs={
         'placeholder' : 'Имя',
@@ -48,7 +48,7 @@ class LoginForm(forms.ModelForm):
     model = User
     fields = ['email', 'password']
     widgets = {
-      'email': forms.TextInput(attrs={
+      'email': forms.EmailInput(attrs={
         'placeholder' : 'Email',
         'required' : True
       }),

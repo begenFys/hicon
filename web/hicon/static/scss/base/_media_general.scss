@@ -42,5 +42,23 @@
       color: $main-text;
       box-shadow: none;
     }
+    &_modal {
+      width: 165px;
+    }
+  }
+  .header {
+    justify-content: flex-end;
+    &__up {
+      &_auth {
+        left: 5px;
+      }
+    }
+    &__link {
+      font-size: 20px;
+      &:nth-child(2) {
+        font-size: 22px;
+        margin: 0;
+      }
+    }
   }
 }

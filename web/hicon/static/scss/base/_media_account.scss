@@ -1,0 +1,33 @@
+@media (max-width: 1200px) {
+  .account {
+    &__wrapper {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .account {
+    &__wrapper {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  .account {
+    &__wrapper {
+      width: 100%;
+    }
+    .overlay {
+      .modal {
+        width: 100%;
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

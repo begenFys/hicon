@@ -1,0 +1,65 @@
+.account{
+  @include top;
+  padding: 15px;
+  &__wrapper {
+    margin: 0 auto;
+    background-color: $section-back;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+  }
+  &__name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: $second-text;
+  }
+  &__email {
+    font-size: 20px;
+    font-weight: 700;
+    color: $main-text;
+    text-align: center;
+  }
+  &__exit {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba($color: #000000, $alpha: .56);
+    z-index: 1000;
+    .modal {
+      border-radius: 10px;
+      padding: 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $main-back;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 0px 20px 1px #fff;
+      &__title {
+        font-size: 28px;
+        color: $second-text;
+        margin-bottom: 15px;
+      }
+      &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+          margin-bottom: 15px;
+          padding: 10px 5px 8px 10px;
+          border-radius: 10px;
+          border: 1px solid $main-text;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

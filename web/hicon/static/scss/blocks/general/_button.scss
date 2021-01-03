@@ -39,6 +39,9 @@
   &_reg {
     width: 290px;
   }
+  &_modal {
+    width: 165px;
+  }
   &:hover{
     color: $main-text;
     box-shadow: 0 0 10px 5px $second-back-hover;
