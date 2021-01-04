@@ -38,12 +38,12 @@
         }
       }
     }
+    &_exit {
+      width: 90px;
+    }
     &:hover {
       color: $main-text;
       box-shadow: none;
-    }
-    &_modal {
-      width: 165px;
     }
   }
   .header {

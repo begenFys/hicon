@@ -1,5 +1,9 @@
 @media (max-width: 1200px) {
-
+  .homework {
+    &__wrapper {
+      width: 50%;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -7,8 +11,17 @@
 }
 
 @media (max-width: 767px) {
-  
+  .homework {
+    &__wrapper {
+      width: 65%;
+    }
+  }
 }
 @media (max-width: 575px) {
-
+  .homework {
+    padding: 15px;
+    &__wrapper {
+      width: 100%;
+    }
+  }
 }

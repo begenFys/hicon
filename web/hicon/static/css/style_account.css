@@ -52,8 +52,9 @@
   width: 290px;
 }
 
-.btn_modal {
-  width: 165px;
+.btn_exit {
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .btn:hover {
@@ -172,11 +173,6 @@
   font-weight: 700;
   color: #222;
   text-align: center;
-}
-
-.account__exit {
-  margin: 0 auto;
-  margin-top: 15px;
 }
 
 .account .overlay {
@@ -381,13 +377,13 @@
     -webkit-animation: none;
             animation: none;
   }
+  .btn_exit {
+    width: 90px;
+  }
   .btn:hover {
     color: #222;
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-  .btn_modal {
-    width: 165px;
   }
   .header {
     -webkit-box-pack: end;
@@ -421,12 +417,6 @@
 @media (max-width: 575px) {
   .account__wrapper {
     width: 100%;
-  }
-  .account .overlay .modal {
-    width: 100%;
-  }
-  .account .overlay .modal__title {
-    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style_account.css.map */

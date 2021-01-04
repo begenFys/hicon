@@ -39,8 +39,9 @@
   &_reg {
     width: 290px;
   }
-  &_modal {
-    width: 165px;
+  &_exit{
+    margin: 0 auto;
+    margin-top: 15px;
   }
   &:hover{
     color: $main-text;
