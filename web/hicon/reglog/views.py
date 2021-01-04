@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from .forms import RegForm, LoginForm
-""" from account.models import Info """
 from django.contrib.auth import authenticate, login
 
 def reg(request):
@@ -50,19 +49,14 @@ def log(request):
         if user is not None:
           login(request, user)
           return redirect('account')
-        
-      context = {
-        'form': form_log
-      }
-
-      return render(request, 'reglog/log.html', context)
   
     else:
       form_log = LoginForm()
-      context = {
-      'form': form_log,
+
+    context = {
+        'form': form_log
       }
-      return render(request, 'reglog/log.html', context)
+    return render(request, 'reglog/log.html', context)
 
   else:
     return redirect('account')

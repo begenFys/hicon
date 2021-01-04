@@ -25,6 +25,31 @@
       <a href="{% url 'exit' %}" class="btn btn_exit">Выход</a>
     </div>
   </section>
+  <section class="list">
+    <div class="overlay">
+      <div class="modal">
+        <div class="modal__close">&times;</div>
+        <form method="post" class="modal__form">
+          {% csrf_token %}
+          {{ form.subj }}
+          {{ form.homework }}
+          {{ form.date }}
+          <button type="submit" class="btn btn_modal">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <div class="list__wrapper">
+      <div class="list__title">
+        Список Д/З
+      </div>
+      <button class="btn btn_add">Добавить Д/З</button>
+      <a href="{% url 'homework' %}" class="btn btn_start">Начать выполнять</a>
+    </div>
+  </section>
 {% endblock %}
 {% block footer %}
+{% endblock %}
+{% block javascript %}
+  <script src="{% static 'js/links.js' %}"></script>
+  <script src="{% static 'js/modal.js' %}"></script>
 {% endblock %}
