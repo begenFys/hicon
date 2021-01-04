@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'promo',
     'reglog',
     'account',
+    'homework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

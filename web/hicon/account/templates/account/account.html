@@ -9,27 +9,12 @@
     <div class="header__links">
       <a href="{% url 'account' %}" class="header__link">Профиль</a>
       <a href="{% url 'account' %}" class="header__link">hicon</a>
-      <a href="{% url 'account' %}" class="header__link">Домашка</a>
+      <a href="{% url 'homework' %}" class="header__link">Домашка</a>
     </div>
   </header>
 {% endblock %}
 {% block content %}
   <section class="account">
-<!--     {% if not acc_info.info %}
-      <div class="overlay">
-        <div class="modal">
-          {{ acc_info.info }}
-          {{ acc_info }}
-          <div class="modal__title">Ещё немного инфы и всё!</div>
-          <form method="post" class="modal__form">
-            {% csrf_token %}
-            {{ form.number_class }}
-            {{ form.fav_subj }}
-            <button class="btn btn_modal">Заполнить</button>
-          </form>
-        </div>
-      </div>
-    {% endif %} -->
     <div class="account__wrapper">
       <div class="account__name">
         {{ acc.first_name }} {{ acc.last_name }}
@@ -37,12 +22,6 @@
       <div class="account__email">
         {{ acc.email }}
       </div>
-<!--       <div class="account__class">
-        Класс: <span>{{ acc_info.number_class }}</span>
-      </div>
-      <div class="account__favourite">
-        Любимый предмет: <span>{{ acc_info.fav_subj }}</span>
-      </div> -->
       <a href="{% url 'exit' %}" class="btn account__exit">Выход</a>
     </div>
   </section>
