@@ -146,11 +146,10 @@
   margin: 0 auto;
   width: 320px;
   height: 70px;
-  font-family: Philosopher;
-  font-size: 28px;
+  font-size: 26px;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 72px;
+  line-height: 80px;
 }
 
 .btn_big img {
@@ -170,6 +169,29 @@
 
 .btn_reg {
   width: 290px;
+}
+
+.btn_exit {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.btn_add {
+  width: 180px;
+  color: #009A4D;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.btn_start {
+  width: 230px;
+  color: #B9001C;
+  font-size: 20px;
+}
+
+.btn_modal {
+  width: 160px;
+  color: #009A4D;
 }
 
 .btn:hover {
@@ -214,10 +236,20 @@
           animation: up 1s linear;
 }
 
+.header__up_auth {
+  position: absolute;
+  left: 10px;
+}
+
 .header__logo {
   color: #3129D8;
   font-size: 28px;
   line-height: 28px;
+  text-decoration: none;
+}
+
+.header__logo:hover {
+  color: #3129D8;
 }
 
 .header__buttons {
@@ -228,6 +260,33 @@
 
 .header__buttons .btn:nth-child(1) {
   margin-right: 10px;
+}
+
+.header_links {
+  width: 100%;
+  text-align: center;
+}
+
+.header__link {
+  color: #222;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.header__link:nth-child(2) {
+  margin: 0 10px;
+  color: #3129D8;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.header__link:nth-child(2):hover {
+  color: #3129D8;
+}
+
+.header__link:hover {
+  color: #222;
 }
 
 .promo {
@@ -314,9 +373,8 @@
 }
 
 .promo__text {
-  width: 125px;
+  width: 170px;
   text-align: center;
-  font-family: Philosopher;
   font-size: 20px;
   line-height: 20px;
 }
@@ -329,7 +387,6 @@
 }
 
 .about__text span {
-  font-family: Philosopher;
   font-size: 28px;
   font-weight: bold;
   font-style: italic;
@@ -346,7 +403,6 @@
 .about__list li {
   position: relative;
   margin-bottom: 18px;
-  font-family: Philosopher;
   font-weight: 400;
   font-size: 28px;
   color: #3129D8;
@@ -355,7 +411,7 @@
 .about__list li::before {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: -18px;
   width: 15px;
   height: 15px;
@@ -405,6 +461,21 @@
   height: 46px;
 }
 
+@keyframes rise {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .footer {
   position: relative;
   top: 65px;
@@ -425,6 +496,7 @@
 }
 
 .footer__social {
+  margin: 0 auto;
   width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,13 +525,11 @@
 }
 
 .footer__descr {
-  font-family: Philosopher;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
 }
 
 .footer__descr a {
-  font-family: Comfortaa;
   font-weight: 400;
   color: #3129D8;
   -webkit-transition: all 0.6s;
@@ -518,10 +588,38 @@
     -webkit-animation: none;
             animation: none;
   }
+  .btn_exit {
+    width: 90px;
+  }
+  .btn_add {
+    height: 40px;
+    width: 160px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .btn_start {
+    height: 40px;
+    width: 210px;
+    font-size: 18px;
+    line-height: 42px;
+  }
+  .btn_modal {
+    width: 160px;
+  }
   .btn:hover {
     color: #222;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .header__up_auth {
+    left: 5px;
+  }
+  .header__link {
+    font-size: 20px;
+  }
+  .header__link:nth-child(2) {
+    font-size: 22px;
+    margin: 0;
   }
 }
 

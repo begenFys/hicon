@@ -11,8 +11,8 @@ class Subjects(models.Model):
 class ListHomework(models.Model):
   email = models.CharField('Email', max_length = 100)
   subj = models.ForeignKey(Subjects,verbose_name='Предмет', on_delete=models.CASCADE)
-  homework = models.CharField('Дз', max_length=255)
-  date = models.DateField('Дата сдачи')
+  homework = models.TextField('Дз')
+  date = models.TextField('Даты сдачи')
 
   def __str__(self):
     return f'Дз {self.email} по {self.subj}'

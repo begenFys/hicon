@@ -44,6 +44,25 @@
       </div>
       <button class="btn btn_add">Добавить Д/З</button>
       <a href="{% url 'homework' %}" class="btn btn_start">Начать выполнять</a>
+      {% for id, subj, hws in homeworks %}
+        <div class="list__item">
+            <div class="list__subj">{{ subj }}</div>
+            <div class="list__homeworks">
+              <div class="container-fluid">
+                <div class="row">
+                  {% for hw, date, ind in hws %}
+                    <div class="col-12 list__col">
+                        <div class="list__full">
+                          <a href="{% url 'complete' pk=id index=ind %}"><img src="{% static 'icons/check.svg' %}" class="list__check" alt="check"></a>
+                          <p class="list__text"><span class="list__hw">{{ hw }}</span> - <span class="list__date">{{ date }}</span></p>
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}
