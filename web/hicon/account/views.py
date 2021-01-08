@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from .forms import ListHomeworkForm
 from .models import ListHomework
-from django.views.generic import DeleteView
+from django.views.generic import DeleteView, UpdateView
 
 def account(request):
   try:
@@ -56,17 +56,45 @@ class CompleteHomework(DeleteView):
   template_name = 'account/complete.html'
   success_url = '/account/'
   def delete(self, request, *args, **kwargs):
-    path = request.path.split('/')
-    pk = int(path[3])
-    index = int(path[4])
-    obj = ListHomework.objects.get(pk=pk)
+    obj = ListHomework.objects.get(pk=kwargs['pk'])
     cur_hw = obj.homework.split(';')
-    cur_hw.pop(index)
+    cur_hw.pop(kwargs['index'])
+    cur_date = obj.date.split(';')
+    cur_date.pop(kwargs['index'])
     if len(cur_hw)==0:
       obj.delete()
       return redirect('account')
-    ListHomework.objects.filter(pk=pk).update(
-      homework = ';'.join(cur_hw)
+    ListHomework.objects.filter(pk=kwargs['pk']).update(
+      homework = ';'.join(cur_hw),
+      date = ';'.join(cur_date)
+    )
+    obj.refresh_from_db()
+    return redirect('account')
+
+class ChangeHomework(UpdateView):
+  model = ListHomework
+  template_name = 'account/update.html'
+  success_url = '/account/'
+
+  def get(self, request, *args, **kwargs):
+    form = ListHomeworkForm()
+    context = {
+        'form' : form
+    }
+    return render(request, 'account/update.html', context)
+
+  def post(self, request, *args, **kwargs):
+    form = ListHomeworkForm(request.POST)
+    obj = ListHomework.objects.get(pk=kwargs['pk'])
+    cur_hw = obj.homework.split(';')
+    cur_hw[kwargs['index']] = form.data['homework']
+    cur_date = obj.date.split(';')
+    nof_date = form.data['date'].split('-')
+    f_date = '.'.join(nof_date[::-1])
+    cur_date[kwargs['index']] = f_date
+    ListHomework.objects.filter(pk=kwargs['pk']).update(
+      homework = ';'.join(cur_hw),
+      date = ';'.join(cur_date)
     )
     obj.refresh_from_db()
     return redirect('account')

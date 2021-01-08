@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/style_complete.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style_update.min.css' %}">
 {% endblock %}
 {% block header %}
   <header class="header">
@@ -14,12 +14,13 @@
   </header>
 {% endblock %}
 {% block content %}
-  <div class="complete">
-    <form method="post" class="complete__form">
+  <div class="update">
+    <form method="post" class="update__form">
       {% csrf_token %}
-      <div class="complete__title">Ты точно сделал эту домашку?</div>
-      <a href="{% url 'account' %}" class="btn btn_no">Нет((</a>
-      <button type="submit" class="btn">Да!</button>
+      <div class="update__title">Запишу другую домашку и мы её исправим</div>
+      {{ form.homework }}
+      {{ form.date }}
+      <button type="submit" class="btn btn_update">Подтвердить</button>
     </form>
   </div>
 {% endblock %}
