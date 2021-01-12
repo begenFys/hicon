@@ -1,8 +1,14 @@
 {% extends 'layout.html' %}
 {% load static %}
-{% block css %}
-<link rel="stylesheet" href="{% static 'css/style_account.min.css' %}">
+
+{% block title %}
+  Профиль
 {% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style_account.min.css' %}">
+{% endblock %}
+
 {% block header %}
   <header class="header">
     <a href="#up" class="header__up header__up_auth"><img src="{% static 'icons/arrow.svg' %}" alt="arrow_up"></a>
@@ -13,6 +19,7 @@
     </div>
   </header>
 {% endblock %}
+
 {% block content %}
   <section class="account">
     <div class="account__wrapper">

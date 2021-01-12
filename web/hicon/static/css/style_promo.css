@@ -151,7 +151,6 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-  outline: none;
   border: none;
 }
 
@@ -530,6 +529,9 @@
 }
 
 @media (max-width: 991px) {
+  .promo__item {
+    margin-bottom: 15px;
+  }
   .footer {
     height: 100%;
     padding: 20px 0;
@@ -549,16 +551,9 @@
   .footer .row > *:last-child {
     margin-bottom: 0;
   }
-  .promo__item {
-    margin-bottom: 15px;
-  }
 }
 
 @media (max-width: 767px) {
-  .footer__descr {
-    text-align: center;
-    line-height: 22px;
-  }
   .title {
     margin-bottom: 18px;
   }
@@ -576,6 +571,10 @@
   }
   .function .swiper-container {
     height: 320px;
+  }
+  .footer__descr {
+    text-align: center;
+    line-height: 22px;
   }
 }
 

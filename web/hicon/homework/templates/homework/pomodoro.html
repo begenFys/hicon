@@ -1,16 +1,44 @@
 {% extends 'account/account.html' %}
 {% load static %}
+
+{% block title %}
+  Метод Помидора
+{% endblock %}
+
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/style_pomodoro.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_pomodoro.min.css' %}">
 {% endblock %}
 
 {% block content %}
   <section class="pomodoro">
     <div class="pomodoro__wrapper">
-      sdfsdfsdf
+      <div class="overlay">
+        <div class="modal pomodoro__modal">
+          <div class="modal__close pomodoro__close">&times;</div>
+          <div class="pomodoro__title">
+            Метод Помидора
+          </div>
+          <div class="pomodoro__subtitle"></div>
+        </div>
+      </div>
+      <p class="pomodoro__state"></p>
+      <p class="pomodoro__time"></p>
+      <ul class="pomodoro__counter">
+        <li class="pomodoro__item"></li>
+        <li class="pomodoro__item"></li>
+        <li class="pomodoro__item"></li>
+      </ul >
+      <button class="btn_pomodoro pomodoro__start">Запуск</button>
+      <button class="btn_pomodoro pomodoro__pause">Пауза</button>
+      <button class="btn_pomodoro pomodoro__reset_time">Начать с начала</button>
+      <button class="btn_pomodoro pomodoro__reset_pomo">Обнулить помидорки</button>
     </div>
+    <audio src="{% static 'music/done.mp3' %}" class="pomodoro__audio_done"></audio>
+    <audio src="{% static 'music/work.mp3' %}" class="pomodoro__audio_work"></audio>
   </section>
 {% endblock %}
 
 {% block javascript %}
+  <script src="{% static 'js/modal_close.js' %}"></script>
+  <script src="{% static 'js/pomodoro.js' %}"></script>
 {% endblock %}
