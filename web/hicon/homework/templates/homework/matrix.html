@@ -6,11 +6,84 @@
 
 {% block content %}
   <section class="matrix">
-    <div class="matrix__wrapper">
-      sdfsdfsdf
+    <div class="overlay">
+      <div class="modal matrix__modal">
+        <div class="modal__close matrix__close">&times;</div>
+        <div class="matrix__title">
+          Матрица Эйзенхауэра
+        </div>
+        <div class="matrix__subtitle"></div>
+      </div>
+    </div>
+    <div class="matrix__table">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 matrix__block" data-type="1">
+            <div class="matrix__name">Срочно и важно!</div>
+            <div class="matrix__wrapper">
+              {% for el in type1 %}
+                <div class="matrix__item">
+                  <div class="matrix__subj">{{ el.subj }}</div>
+                  <div class="matrix__hw">{{ el.homework }}</div>
+                  <div class="matrix__date">{{ el.date }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-6 matrix__block" data-type="2">
+            <div class="matrix__name">Важно, но не срочно</div>
+            <div class="matrix__wrapper">
+              {% for el in type2 %}
+                <div class="matrix__item">
+                  <div class="matrix__subj">{{ el.subj }}</div>
+                  <div class="matrix__hw">{{ el.homework }}</div>
+                  <div class="matrix__date">{{ el.date }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-6 matrix__block" data-type="3">
+            <div class="matrix__name">Неважно, но срочно!</div>
+            <div class="matrix__wrapper">
+              {% for el in type3 %}
+                <div class="matrix__item">
+                  <div class="matrix__subj">{{ el.subj }}</div>
+                  <div class="matrix__hw">{{ el.homework }}</div>
+                  <div class="matrix__date">{{ el.date }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-6 matrix__block" data-type="4">
+            <div class="matrix__name">Неважно и не срочно</div>
+            <div class="matrix__wrapper">
+              {% for el in type4 %}
+                <div class="matrix__item">
+                  <div class="matrix__subj">{{ el.subj }}</div>
+                  <div class="matrix__hw">{{ el.homework }}</div>
+                  <div class="matrix__date">{{ el.date }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-md-12 matrix__none" data-type="5" >
+            <div class="matrix__name">Тип отсутвует</div>
+            <div class="matrix__wrapper">
+              {% for el in type5 %}
+                <div class="matrix__item">
+                  <div class="matrix__subj">{{ el.subj }}</div>
+                  <div class="matrix__hw">{{ el.homework }}</div>
+                  <div class="matrix__date">{{ el.date }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 {% endblock %}
 
 {% block javascript %}
+  <script src="{% static 'js/modal_close.js' %}"></script>
 {% endblock %}

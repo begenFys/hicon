@@ -7,10 +7,20 @@
 {% block content %}
   <section class="frog">
     <div class="frog__wrapper">
-      sdfsdfsdf
+      <div class="overlay">
+        <div class="modal frog__modal">
+          <div class="modal__close frog__close">&times;</div>
+          <div class="frog__title">
+            Съесть лягушку
+          </div>
+          <div class="frog__subtitle"></div>
+        </div>
+      </div>
+      ываываыва
     </div>
   </section>
 {% endblock %}
 
 {% block javascript %}
+  <script src="{% static 'js/modal_close.js' %}"></script>
 {% endblock %}

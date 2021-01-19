@@ -1,3 +1,4 @@
+/* overlay */
 /* title */
 /* header */
 /* btns */
@@ -87,6 +88,40 @@
   color: #222;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+  z-index: 1000;
+}
+
+.modal {
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__close {
+  cursor: pointer;
+  font-size: 48px;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -170,6 +205,26 @@
 .salami {
   position: relative;
   top: 65px;
+}
+
+.salami__modal {
+  background-color: #fff;
+  border: 3px solid #D6C3F1;
+}
+
+.salami__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.salami__subtitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 @media (max-width: 575px) {

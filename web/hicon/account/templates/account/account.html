@@ -40,6 +40,7 @@
           {% csrf_token %}
           {{ form.subj }}
           {{ form.homework }}
+          {{ form.matrix_type }}
           {{ form.date }}
           <button type="submit" class="btn btn_modal">Добавить</button>
         </form>
@@ -57,7 +58,7 @@
             <div class="list__homeworks">
               <div class="container-fluid">
                 <div class="row">
-                  {% for hw, date, ind in hws %}
+                  {% for hw, type, date, ind, data_matrix in hws %}
                     <div class="col-12 list__col">
                         <div class="list__full">
                           <div class="list__btns">
@@ -65,6 +66,7 @@
                             <a href="{% url 'change' pk=id index=ind %}"><img src="{% static 'icons/cog.svg' %}" class="list__img" alt="check"></a>
                           </div>
                           <p class="list__text"><span class="list__hw">{{ hw }}</span> - <span class="list__date">{{ date }}</span></p>
+                          <p class="list__type" data-type="{{ data_matrix }}">{{ type }}</p>
                         </div>
                     </div>
                   {% endfor %}

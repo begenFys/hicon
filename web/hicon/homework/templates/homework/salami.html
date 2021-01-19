@@ -7,10 +7,20 @@
 {% block content %}
   <section class="salami">
     <div class="salami__wrapper">
+      <div class="overlay">
+        <div class="modal salami__modal">
+          <div class="modal__close salami__close">&times;</div>
+          <div class="salami__title">
+            Метод салями
+          </div>
+          <div class="salami__subtitle"></div>
+        </div>
+      </div>
       sdfsdfsdf
     </div>
   </section>
 {% endblock %}
 
 {% block javascript %}
+<script src="{% static 'js/modal_close.js' %}"></script>
 {% endblock %}

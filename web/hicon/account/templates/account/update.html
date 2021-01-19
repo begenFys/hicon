@@ -19,6 +19,7 @@
       {% csrf_token %}
       <div class="update__title">Запишу другую домашку и мы её исправим</div>
       {{ form.homework }}
+      {{ form.matrix_type }}
       {{ form.date }}
       <button type="submit" class="btn btn_update">Подтвердить</button>
     </form>

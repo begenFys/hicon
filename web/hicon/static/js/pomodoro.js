@@ -1,15 +1,6 @@
 // устанавливаем значения
 'use strict';
 
-
-if ( localStorage.getItem('show') ) {
-  if ( localStorage.show == 0 ) {
-    document.querySelector('.overlay').style.display = 'none';
-  }
-} else {
-  localStorage.setItem('show', 0);
-}
-
 if ( !localStorage.getItem('pomodoro') ) {
   localStorage.setItem('pomodoro', 0);
   localStorage.setItem('time', 1500);
@@ -49,9 +40,8 @@ const pomodoroDone = () => {
     pomo[p].classList.add('pomodoro__item_done')
   }
 }
-if (Number(localStorage.relax)) {
-  pomodoroDone();
-}
+pomodoroDone();
+
 
 const pomodoroClear = () => {
   let p = Number(localStorage.pomodoro);
@@ -85,7 +75,7 @@ const shortRelaxTime = () => {
 }
 
 const longRelaxTime = () => {
-  localStorage.time = 1800;
+  localStorage.time = 1500;
   localStorage.relax = 1
   setTime();
   localStorage.state = 'Время длинного перерыва!';
@@ -106,7 +96,9 @@ const startTime = () => {
     }
     if (localStorage.time == 0 && Number(localStorage.relax)) {
       pauseTime();
-      localStorage.pomodoro = Number(localStorage.pomodoro) + 1;
+      if ( !(localStorage.state == 'Время длинного перерыва!') ){
+        localStorage.pomodoro = Number(localStorage.pomodoro) + 1;
+      }
       pomodoroDone();
       document.querySelector('.pomodoro__audio_work').play();
       workTime();

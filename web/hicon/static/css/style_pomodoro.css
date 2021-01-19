@@ -253,11 +253,11 @@
 
 .pomodoro__title {
   text-align: center;
-  color: #BA0025;
   font-weight: 700;
   font-size: 32px;
   line-height: 32px;
   margin-bottom: 15px;
+  color: #BA0025;
 }
 
 .pomodoro__subtitle {
