@@ -364,6 +364,26 @@
   padding: 5px;
 }
 
+.list__status {
+  font-size: 22px;
+  margin-bottom: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.list__status_skip {
+  color: #808080;
+}
+
+.list__status_tmr {
+  color: #FF961E;
+}
+
+.list__status_today {
+  color: #FF3C59;
+}
+
 .list__text {
   margin-bottom: 0;
   font-size: 24px;

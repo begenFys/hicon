@@ -1,3 +1,5 @@
+'use strict';
+
 // плавные ссылки
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {

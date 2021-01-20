@@ -1,3 +1,5 @@
+'use strict';
+
 document.querySelector('.btn_add').addEventListener('click', function(){
   document.querySelector('.overlay').style.display = 'block'
 });

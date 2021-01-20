@@ -61,6 +61,7 @@
                   {% for hw, type, date, wd, ind, data_matrix in hws %}
                     <div class="col-12 list__col">
                         <div class="list__full">
+                          <div class="list__status"></div>
                           <div class="list__btns">
                             <a href="{% url 'complete' pk=id index=ind %}"><img src="{% static 'icons/check.svg' %}" class="list__img" alt="check"></a>
                             <a href="{% url 'change' pk=id index=ind %}"><img src="{% static 'icons/cog.svg' %}" class="list__img" alt="check"></a>
@@ -83,4 +84,5 @@
 {% block javascript %}
   <script src="{% static 'js/links.js' %}"></script>
   <script src="{% static 'js/modal.js' %}"></script>
+  <script src="{% static 'js/date.js' %}"></script>
 {% endblock %}
