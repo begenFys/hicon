@@ -88,38 +88,36 @@
   color: #222;
 }
 
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.56);
-  z-index: 1000;
-}
-
-.modal {
-  border-radius: 10px;
-  padding: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal__close {
+.btn {
+  display: block;
   cursor: pointer;
-  font-size: 48px;
+  width: 135px;
+  height: 45px;
+  text-align: center;
+  background-color: #FF9A90;
+  color: #222;
+  border-radius: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;
+  border: none;
+}
+
+.btn:hover {
+  color: #222;
+  -webkit-box-shadow: 0 0 10px 5px #D36E64;
+          box-shadow: 0 0 10px 5px #D36E64;
+}
+
+.btn_add {
+  margin: 0 auto;
+  width: 180px;
+  color: #008600;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .header {
@@ -202,29 +200,30 @@
   color: #222;
 }
 
-.frog {
+.notes {
   position: relative;
   top: 65px;
 }
 
-.frog__modal {
-  background-color: #fff;
-  border: 3px solid #D6C3F1;
+.notes__wrapper {
+  padding: 15px;
 }
 
-.frog__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
-  margin-bottom: 15px;
-  color: #222;
+.notes__area {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 80%;
+  border: 2px solid #D6C3F1;
+  border-radius: 10px;
+  outline: #D6C3F1;
 }
 
-.frog__subtitle {
-  text-align: center;
-  font-size: 24px;
-  line-height: 28px;
+@media (max-width: 767px) {
+  .notes__area {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -244,4 +243,4 @@
     margin: 0;
   }
 }
-/*# sourceMappingURL=style_frog.css.map */
+/*# sourceMappingURL=style_notes.css.map */

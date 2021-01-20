@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from account.models import ListHomework
+from .models import Notes
+from .forms import NotesForm
 
 def homework(request):
   try:
@@ -61,18 +63,48 @@ def matrix(request):
     }
     return render(request, 'homework/matrix.html', context)
 
-def frog(request):
+def notes(request):
   try:
     person = User.objects.get(id=request.user.id)
   except:
     return redirect('log')
   else:
-    return render(request, 'homework/frog.html')
+    form = ''
+    if request.method == 'POST':
+      try:
+        form = NotesForm(request.POST)
+        notes = Notes.objects.get(email=person.email)
+      except:
+        if form.is_valid():
+          new_notes = form.save(commit=False)
+          new_notes.email = person.email
+          new_notes.notes = form.cleaned_data['notes']
+          new_notes.save()
+          return redirect('account')  
+      else:
+        if form.is_valid():
+          Notes.objects.filter(email=person.email).update(
+            notes = form.cleaned_data['notes']
+          )
+          notes.refresh_from_db()
+          return redirect('account')  
+    else:
+      try:
+        obj = Notes.objects.get(email=person.email)
+      except:
+        form = NotesForm(
+          initial={
+            'notes': ''
+          }
+        )
+      else:
+        form = NotesForm(
+          initial={
+            'notes': obj.notes
+          }
+        )
 
-def salami(request):
-  try:
-    person = User.objects.get(id=request.user.id)
-  except:
-    return redirect('log')
-  else:
-    return render(request, 'homework/salami.html')
+    context = {
+      'form': form
+    }
+    return render(request, 'homework/notes.html', context)

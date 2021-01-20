@@ -1,0 +1,26 @@
+{% extends 'account/account.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style_notes.min.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="notes">
+    <div class="notes__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form method="post" class="notes__form">
+              {% csrf_token %}
+              {{ form.notes }}
+              <button type="submit" class="btn btn_add">Записать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

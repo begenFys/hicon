@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .forms import ListHomeworkForm
 from .models import ListHomework
 from django.views.generic import DeleteView, UpdateView
+import datetime
 
 def account(request):
   try:
@@ -14,12 +15,19 @@ def account(request):
     homeworks = []
     for el in all_el:
       homework = el.homework.split(';')
+      date = el.date.split(';')
+      uns_wd = [ i.split('.') for i in date ]
+      days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+      weekdays = []
+      for k in uns_wd:
+        d = datetime.datetime(int(k[2]), int(k[1]), int(k[0])).weekday()
+        weekdays.append(days[d])
       matrix_type = el.matrix_type.split(';')
       data_matrix = []
       for i in matrix_type:
         data_matrix.append(int(i[0]))
       indexs = [i for i in range(len(homework))]
-      homeworks.append([el.pk, el.subj.name, zip(homework, matrix_type, el.date.split(';'), indexs, data_matrix)])
+      homeworks.append([el.pk, el.subj.name, zip(homework, matrix_type, date, weekdays, indexs, data_matrix)])
 
     if request.method == 'POST':
       try:
