@@ -6,7 +6,7 @@
 
 И создание суперпользователя:
 - python manage.py createsuperuser
-Где в username нужно указать email
+Где в username нужно указать email.
 И в email также email
 
 - python manage.py runserver
