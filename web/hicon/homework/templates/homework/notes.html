@@ -10,7 +10,11 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <form method="post" class="notes__form">
+            <div class="notes__text">
+              {{ text }}
+            </div>
+            <div class="btn btn_edit">редактировать</div>
+            <form method="post" class="notes__form none">
               {% csrf_token %}
               {{ form.notes }}
               <button type="submit" class="btn btn_add">Записать</button>
@@ -23,4 +27,5 @@
 {% endblock %}
 
 {% block javascript %}
+  <script src="{% static 'js/edit.js' %}"></script>
 {% endblock %}

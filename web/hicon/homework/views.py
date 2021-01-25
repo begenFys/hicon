@@ -87,7 +87,7 @@ def notes(request):
             notes = form.cleaned_data['notes']
           )
           notes.refresh_from_db()
-          return redirect('account')  
+          return redirect('notes')
     else:
       try:
         obj = Notes.objects.get(email=person.email)
@@ -105,6 +105,7 @@ def notes(request):
         )
 
     context = {
-      'form': form
+      'form': form,
+      'text': obj.notes
     }
     return render(request, 'homework/notes.html', context)

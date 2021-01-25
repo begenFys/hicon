@@ -112,6 +112,14 @@
           box-shadow: 0 0 10px 5px #D36E64;
 }
 
+.btn_edit {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 200px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
 .btn_add {
   margin: 0 auto;
   width: 180px;
@@ -205,6 +213,10 @@
   top: 65px;
 }
 
+.notes .none {
+  display: none;
+}
+
 .notes__wrapper {
   padding: 15px;
 }
@@ -218,6 +230,10 @@
   border: 2px solid #D6C3F1;
   border-radius: 10px;
   outline: #D6C3F1;
+}
+
+.notes__text {
+  padding: 7px;
 }
 
 @media (max-width: 767px) {
